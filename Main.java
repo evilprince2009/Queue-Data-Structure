@@ -13,7 +13,6 @@ public class Main {
     // Offering extra member than capacity
     // Throws custom built exception
         customQueue.enque(7);
-        System.out.println(customQueue);
     }
 
     // private static void reverse(Queue<Integer> queue) {
