@@ -32,6 +32,14 @@ public class ArrayQueue {
         return items[0];
     }
 
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == items.length;
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(items);
