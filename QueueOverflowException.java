@@ -1,4 +1,4 @@
-public class QueueOverflowException extends IllegalArgumentException {
+public class QueueOverflowException extends IllegalStateException {
     public QueueOverflowException() {
         super();
     }

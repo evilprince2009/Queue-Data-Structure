@@ -4,6 +4,7 @@ public class ArrayQueue {
     private int[] items;
     private int rear;
     private int count;
+    private int front;
 
     public ArrayQueue(int capacity) {
        this.items = new int[capacity]; 
@@ -12,8 +13,17 @@ public class ArrayQueue {
     public void enque(int item) {
         if (count == items.length)
             throw new QueueOverflowException();
-        items[rear++] = item;
+        items[rear] = item;
+        rear = (rear + 1) % items.length;
         count++;
+    }
+
+    public int deque() {
+        int item = items[front];
+        items[front] = 0;
+        front = (front + 1) % items.length;
+        count--;
+        return item;
     }
 
     @Override
