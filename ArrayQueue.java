@@ -26,6 +26,12 @@ public class ArrayQueue {
         return item;
     }
 
+    public int peek() {
+        if (count == 0)
+            throw new QueueEmptyException();
+        return items[0];
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(items);
